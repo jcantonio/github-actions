@@ -34,7 +34,7 @@ runs:
         echo "SUBSCRIPTION_ID=$(az account show --query id --output tsv --only-show-errors)" >> $GITHUB_ENV
       shell: bash
     - name: Deploy to Azure Spring Cloud
-      uses: azure/spring-apps-deploy@v1@v1
+      uses: azure/spring-apps-deploy@v1
       with:
         action: Deploy
         azure-subscription: ${{ env.SUBSCRIPTION_ID }}
